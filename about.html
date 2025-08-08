@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OpenSetu About Section</title>
+  <style>
+    :root {
+      --max-width: 1200px;
+      --gutter: 24px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: #1F2937;
+      background: #fff;
+    }
+    .about-wrapper {
+      background-color: #F7F9FB;
+      position: relative;
+      overflow: hidden;
+    }
+    .white-tilted-layer {
+      position: absolute; top: 60px;
+      width: 100%; height: 1300px;
+      background: white;
+      transform: skewY(-5deg);
+      z-index: 0;
+    }
+    .blue-shapes {
+      position: absolute; top: -45px; right: 0;
+      z-index: 1; transform: skewY(-5deg);
+    }
+    .blue1, .blue2 { position: absolute; transform: skewX(-30deg); }
+    .blue1 {
+      background-color: #80E9FF;
+      width: 35vw; max-width: 420px;
+      height: 25px; top: 50px; right: 10px;
+      z-index: 1;
+    }
+    .blue2 {
+      background-color: #185ADB;
+      width: 10vw; max-width: 120px;
+      height: 25px; top: 70px; right: 200px;
+      z-index: 2;
+    }
+    .section {
+      position: relative;
+      max-width: var(--max-width);
+      padding: 8rem var(--gutter) 4rem;
+      margin: 0 auto;
+      z-index: 2;
+    }
+    .about-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #032E83;
+      margin: 0 0 1.5rem;
+      text-align: left;
+    }
+    .top-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+    .top-text {
+      flex: 1 1 320px;
+      max-width: 500px;
+      text-align: left;
+    }
+    .top-text .highlight {
+      color: #0A55A7;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .top-text h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0.5rem 0 1.5rem;
+      color: #032E83;
+    }
+    .top-text p {
+      color: #425466;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .top-image {
+      flex: 0 1 320px;
+      max-width: 320px;
+    }
+    .top-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 20px 90px rgba(0,0,0,0.12);
+      border-radius: 15px;
+      justify-items: center;
+    }
+    .grid-box {
+      background: #F5F7FA;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+    .grid-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+    .grid-box h3 {
+      font-size: 1.2rem;
+      color: #032E83;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .grid-box p {
+      color: #425466;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 6rem var(--gutter) 3rem; }
+      .about-heading {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .top-container { flex-direction: column; }
+      .top-text { text-align: center; }
+      .top-text h2 { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .about-heading { font-size: 1.75rem; }
+      .top-text { font-size: 0.9rem; }
+      .top-text h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="about-wrapper">
+    <div class="white-tilted-layer"></div>
+    <div class="blue-shapes">
+      <div class="blue1"></div>
+      <div class="blue2"></div>
+    </div>
+
+    <div class="section">
+      <div class="top-container">
+        <div class="top-text">
+          <h1 class="about-heading">અમારા વિશે</h1>
+          <p class="highlight">એક ઓળખ, એક સમયે</p>
+          <h2>ઓપનસેતુ એ ભારતના પોતાના ઇન્ટરનેટનો પુલ છે</h2>
+          <p>અમે દરેક ભારતીયને તેમની માતૃભાષામાં વેબ ઍક્સેસ કરવાની સુવિધા આપીએ છીએ, અંગ્રેજી નહીં, નવી એપ્લિકેશન નહીં, ગેટકીપર નહીં.</p>
+          <p>મુક્ત, વિકેન્દ્રિત અને સમાવેશક ઇન્ટરનેટના વિઝનમાંથી જન્મેલું, ઓપનસેતુ વપરાશકર્તાઓને હેન્ડશેક દ્વારા સંચાલિત અને ભારતમાં મૂળ ધરાવતા બહુભાષી વેબને અનલૉક કરવા માટે તેમની DNS સેટિંગ્સ બદલવાની મંજૂરી આપે છે. તે તમારી શરતો પર ઇન્ટરનેટ છે, જ્યાં ડોમેન નામો વિદેશી સ્ક્રિપ્ટો અથવા કેન્દ્રિય નિયંત્રણમાં નથી, પરંતુ તમારી પોતાની ભાષામાં છે, જે તમારી માલિકીની છે.</p>
+          <p>અમે ઇન્ટરનેટને એકાધિકારથી મુક્ત કરી રહ્યા છીએ અને લોકોને એક સમયે એક નામ, એક ભાષા, એક ઓળખ પાછું આપી રહ્યા છીએ.</p>
+        </div>
+        <div class="top-image">
+          <img src="img5.png" alt="About Image">
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid-box">
+          <h3>બિલ્ડરો માટે</h3>
+          <p>ઓપનસેતુ નવીનતા માટેનું મેદાન છે. સ્થાનિક ભાષામાં એપ્લિકેશનો બનાવતા ડેવલપર્સથી લઈને ડિજિટલ ઓળખની પુનઃકલ્પના કરતા સ્ટાર્ટઅપ્સ સુધી, ભારત પાસે હવે એક વિકેન્દ્રિત પાયો છે જે આકાર લેવા માટે તૈયાર છે. મૂળ ડોમેન નામો, બહુભાષી લોગિન અને ખુલ્લા DNS સાથે, તમે એવી સેવાઓ બનાવી શકો છો જે 1.4 અબજ અવાજો સાથે તેમની પોતાની ભાષામાં સીધી વાત કરે છે.</p>
+        </div>
+        <div class="grid-box">
+          <h3>રોકાણકારો માટે</h3>
+          <p>ભારત ખુલ્લા ઇન્ટરનેટ પર માનવજાતનો સૌથી મોટો હિસ્સો છે. ઓપનસેતુ માત્ર ઇન્ફ્રાસ્ટ્રક્ચર નથી, તે ઇન્ફ્રા-પાવર છે. અમે ભાષા અવરોધ દૂર કરીને અને વ્યક્તિઓને ડિજિટલ માલિકી પરત કરીને આગામી અબજ વપરાશકર્તાઓને અનલૉક કરી રહ્યા છીએ. ઇકોસિસ્ટમ ઓએસ અને બ્રાઉઝર્સ જેવી ઇન્ફ્રા ટેકથી લઈને ડિજિટલ ઓળખ, ચુકવણી, વાણિજ્ય અને સંદેશાવ્યવહાર જેવી સેવાઓ સુધીની દરેક વસ્તુને ફરીથી આકાર આપશે, જે ભારતના સૌથી પાયાના સ્તર પર આધારિત છે: તેનું પોતાનું ઇન્ટરનેટ. તેના પર નિર્માણ કરતી રેલ્સ અને સ્થાપકોમાં રોકાણ કરો અને તમે ડિજિટલ ભારતના ભવિષ્યમાં રોકાણ કરો છો.</p>
+        </div>
+        <div class="grid-box">
+          <h3>સરકારો માટે</h3>
+          <p>ડિજિટલ જાહેર માલ ડિજિટલ જાહેર માળખાગત સુવિધાને પાત્ર છે. ઓપનસેતુ પારદર્શિતા, સમાવેશકતા અને સાર્વભૌમત્વના મૂળમાં છે. અમે ઇન્ડિયા સ્ટેકના વિઝન સાથે સુસંગત છીએ અને દરેક નાગરિકને તેમની માતૃભાષામાં ડિજિટલ સેવાઓનો ઉપયોગ કરવા માટે સશક્ત બનાવીએ છીએ. ગ્રામીણ ઍક્સેસથી લઈને રાષ્ટ્રીય સ્તરે, ઓપનસેતુ સરકારોને પૂર્ણ-સ્ટેક ડિજિટલ સમાવેશ માટે સલામત, સાર્વભૌમ માર્ગ પ્રદાન કરે છે. ભારતને વૈશ્વિક ઇન્ટરનેટનો સામનો કરવાની જરૂર નથી. ઓપનસેતુ સાથે, આપણે આપણી પોતાની ભાષામાં, આપણી પોતાની શરતો પર આગળ વધીએ છીએ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
