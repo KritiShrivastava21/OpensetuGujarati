@@ -1,9 +1,129 @@
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OpenSetu About Section</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    /* Menu bar styling */
+    .top-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #f8f9fa;
+      padding: 12px 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .top-menu a {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .top-menu a:hover {
+      color: #007BFF;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* Side menu */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 2000;
+    }
+    .side-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+    .side-menu a:hover {
+      color: #007BFF;
+    }
+    .side-menu .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2em;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Responsive rules */
+    @media (max-width: 768px) {
+      .top-menu a {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+    }
+  </style>
+</head>
+<body class="page">
+
+    <!-- Top Menu -->
+  <nav class="top-menu">
+    <a href="index.html">હોમ</a>
+    <a href="about.html">અમારા વિષે</a>
+    <a href="beta.html">કાનૂની</a>
+    <a href="documentation.html">દસ્તાવેજીકરણ</a>
+    <a href="domain.html">ડોમેન યાદી</a>
+    <button class="menu-toggle" onclick="openMenu()"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="index.html">હોમ</a>
+    <a href="about.html">અમારા વિષે</a>
+    <a href="beta.html">કાનૂની</a>
+    <a href="documentation.html">દસ્તાવેજીકરણ</a>
+    <a href="domain.html">ડોમેન યાદી</a>
+  </div>
+
+
+  <script>
+function openMenu() {
+  document.getElementById("sideMenu").style.width = "250px"; // Adjust width as needed
+}
+
+function closeMenu() {
+  document.getElementById("sideMenu").style.width = "0";
+}
+</script>
+
+
+
+
   <style>
     :root {
       --max-width: 1200px;
@@ -113,6 +233,7 @@
       border-radius: 15px;
       justify-items: center;
     }
+    
     .grid-box {
       background: #F5F7FA;
       padding: 1.5rem;
@@ -138,6 +259,7 @@
       margin: 0;
     }
 
+    /* Breakpoints */
     @media (max-width: 768px) {
       .section { padding: 6rem var(--gutter) 3rem; }
       .about-heading {
@@ -166,12 +288,13 @@
     <div class="section">
       <div class="top-container">
         <div class="top-text">
-          <h1 class="about-heading">અમારા વિશે</h1>
-          <p class="highlight">એક ઓળખ, એક સમયે</p>
-          <h2>ઓપનસેતુ એ ભારતના પોતાના ઇન્ટરનેટનો પુલ છે</h2>
-          <p>અમે દરેક ભારતીયને તેમની માતૃભાષામાં વેબ ઍક્સેસ કરવાની સુવિધા આપીએ છીએ, અંગ્રેજી નહીં, નવી એપ્લિકેશન નહીં, ગેટકીપર નહીં.</p>
-          <p>મુક્ત, વિકેન્દ્રિત અને સમાવેશક ઇન્ટરનેટના વિઝનમાંથી જન્મેલું, ઓપનસેતુ વપરાશકર્તાઓને હેન્ડશેક દ્વારા સંચાલિત અને ભારતમાં મૂળ ધરાવતા બહુભાષી વેબને અનલૉક કરવા માટે તેમની DNS સેટિંગ્સ બદલવાની મંજૂરી આપે છે. તે તમારી શરતો પર ઇન્ટરનેટ છે, જ્યાં ડોમેન નામો વિદેશી સ્ક્રિપ્ટો અથવા કેન્દ્રિય નિયંત્રણમાં નથી, પરંતુ તમારી પોતાની ભાષામાં છે, જે તમારી માલિકીની છે.</p>
-          <p>અમે ઇન્ટરનેટને એકાધિકારથી મુક્ત કરી રહ્યા છીએ અને લોકોને એક સમયે એક નામ, એક ભાષા, એક ઓળખ પાછું આપી રહ્યા છીએ.</p>
+          <h1 class="about-heading">અમારા વિષે</h1>
+
+          <h2>ઓપનસેતુ એ બ્રિજ છે
+            <br>ભારતના પોતાના ઇન્ટરનેટ માટે.</h2>
+          <p>અમે દરેક ભારતીયને તેમની માતૃભાષામાં વેબ ઍક્સેસ કરવા દે છે, કોઈ અંગ્રેજી, કોઈ નવા ઍપ્સ, કોઈ ગેટકીપર્સ નહીં.</p>
+          <p>મુક્ત, વિકેન્દ્રીકૃત અને સમાવિષ્ટ ઇન્ટરનેટના વિઝનથી જન્મેલું, ઓપનસેતુ વપરાશકર્તાઓને ફક્ત તેમના DNS સેટિંગ્સ બદલીને હેન્ડશેક દ્વારા શક્તિશાળી, બહుభાષી વેબ અનલૉક કરવા દે છે જે ભારતમાં આધારિત છે. આ તમારી શરતો પર ઇન્ટરનેટ છે, જ્યાં ડોમેન નામો વિદેશી લિપિમાં કે કેન્દ્રીય નિયંત્રણ હેઠળ નહીં, પરંતુ તમારી પોતાની ભાષામાં અને તમારી પોતાની માલિકી હોય છે.</p>
+          <p>અમે મોનોપોલીઓમાંથી ઇન્ટરનેટ પાછું લઈ રહ્યા છીએ અને લોકો માટે પાછું આપી રહ્યા છીએ, એક નામ, એક ભાષા, એક ઓળખ સાથે.</p>
         </div>
         <div class="top-image">
           <img src="img5.png" alt="About Image">
@@ -180,19 +303,21 @@
 
       <div class="grid">
         <div class="grid-box">
-          <h3>બિલ્ડરો માટે</h3>
-          <p>ઓપનસેતુ નવીનતા માટેનું મેદાન છે. સ્થાનિક ભાષામાં એપ્લિકેશનો બનાવતા ડેવલપર્સથી લઈને ડિજિટલ ઓળખની પુનઃકલ્પના કરતા સ્ટાર્ટઅપ્સ સુધી, ભારત પાસે હવે એક વિકેન્દ્રિત પાયો છે જે આકાર લેવા માટે તૈયાર છે. મૂળ ડોમેન નામો, બહુભાષી લોગિન અને ખુલ્લા DNS સાથે, તમે એવી સેવાઓ બનાવી શકો છો જે 1.4 અબજ અવાજો સાથે તેમની પોતાની ભાષામાં સીધી વાત કરે છે.</p>
+          <h3>બિલ્ડર્સ માટે</h3>
+          <p>ઓપનસેતુ નવચાર માટેનું પ્લેગ્રાઉન્ડ છે. વિકાસકર્તાઓથી જે સ્થાનિક ભાષામાં ઍપ્સ બનાવે છે અને સ્ટાર્ટઅપ્સ સુધી જે ડિજિટલ ઓળખને ફરીથી કલ્પે છે, હવે ભારત પાસે એક વિકેન્દ્રીકૃત પાયો તૈયાર છે. સ્થાનિક ડોમેન નામો, બહુલિંગ્વલ લોગિન, અને ખુલ્લું DNS સાથે, તમે સેવાઓ બનાવી શકો છો જે 1.4 અબજ લોકોની પોતાની ભાષામાં સીધા સંવાદ કરે છે.</p>
         </div>
         <div class="grid-box">
-          <h3>રોકાણકારો માટે</h3>
-          <p>ભારત ખુલ્લા ઇન્ટરનેટ પર માનવજાતનો સૌથી મોટો હિસ્સો છે. ઓપનસેતુ માત્ર ઇન્ફ્રાસ્ટ્રક્ચર નથી, તે ઇન્ફ્રા-પાવર છે. અમે ભાષા અવરોધ દૂર કરીને અને વ્યક્તિઓને ડિજિટલ માલિકી પરત કરીને આગામી અબજ વપરાશકર્તાઓને અનલૉક કરી રહ્યા છીએ. ઇકોસિસ્ટમ ઓએસ અને બ્રાઉઝર્સ જેવી ઇન્ફ્રા ટેકથી લઈને ડિજિટલ ઓળખ, ચુકવણી, વાણિજ્ય અને સંદેશાવ્યવહાર જેવી સેવાઓ સુધીની દરેક વસ્તુને ફરીથી આકાર આપશે, જે ભારતના સૌથી પાયાના સ્તર પર આધારિત છે: તેનું પોતાનું ઇન્ટરનેટ. તેના પર નિર્માણ કરતી રેલ્સ અને સ્થાપકોમાં રોકાણ કરો અને તમે ડિજિટલ ભારતના ભવિષ્યમાં રોકાણ કરો છો.</p>
+          <h3>નિવેશકો માટે</h3>
+          <p>ભારત ખુલ્લા ઇન્ટરનેટ પર માનવજાતનું સૌથી મોટું ભાગ છે. ઓપનસેતુ ફક્ત ઇન્ફ્રાસ્ટ્રક્ચર નથી, તે ઈન્ફ્રા-પાવર છે. અમે ભાષા અવરોધ દૂર કરીને અને ડિજિટલ માલિકી વ્યક્તિઓને પાછી આપીને આગામી બિલિયન વપરાશકર્તાઓ અનલૉક કરી રહ્યા છીએ. આ ઇકોસિસ્ટમ ઇન્ફ્રા ટેક જેમ કે OS અને બ્રાઉઝર્સથી લઈને ડિજિટલ ઓળખ, પેમેન્ટ, કોમર્સ, અને કમ્યુનિકેશન જેવી સેવાઓ સુધી બધું ફરીથી રચશે, ભારતના સૌથી આધારભૂત સ્તર: તેના પોતાના ઇન્ટરનેટ પર આધાર રાખીને. તેના પર કામ કરતી રેલ્સ અને ફાઉન્ડર્સમાં રોકાણ કરો અને તમે ડિજિટલ ભારતના ભવિષ્યમાં રોકાણ કરો છો.</p>
         </div>
         <div class="grid-box">
           <h3>સરકારો માટે</h3>
-          <p>ડિજિટલ જાહેર માલ ડિજિટલ જાહેર માળખાગત સુવિધાને પાત્ર છે. ઓપનસેતુ પારદર્શિતા, સમાવેશકતા અને સાર્વભૌમત્વના મૂળમાં છે. અમે ઇન્ડિયા સ્ટેકના વિઝન સાથે સુસંગત છીએ અને દરેક નાગરિકને તેમની માતૃભાષામાં ડિજિટલ સેવાઓનો ઉપયોગ કરવા માટે સશક્ત બનાવીએ છીએ. ગ્રામીણ ઍક્સેસથી લઈને રાષ્ટ્રીય સ્તરે, ઓપનસેતુ સરકારોને પૂર્ણ-સ્ટેક ડિજિટલ સમાવેશ માટે સલામત, સાર્વભૌમ માર્ગ પ્રદાન કરે છે. ભારતને વૈશ્વિક ઇન્ટરનેટનો સામનો કરવાની જરૂર નથી. ઓપનસેતુ સાથે, આપણે આપણી પોતાની ભાષામાં, આપણી પોતાની શરતો પર આગળ વધીએ છીએ.</p>
+          <p>ડિજિટલ જાહેર સેવાઓને ડિજિટલ જાહેર ઇન્ફ્રાસ્ટ્રક્ચરનો હક છે. ઓપનસેતુ પારદર્શિતા, સમાવેશ અને સજ્ઞાના મંતવ્ય સાથે બનાવ્યું છે. અમે ઇન્ડિયા સ્ટેકના વિઝન સાથે સુમેળ રાખીએ છીએ અને દરેક નાગરિકને તેમની માતૃભાષામાં ડિજિટલ સેવાઓ ઍક્સેસ કરવા સક્ષમ કરીએ છીએ. ગ્રામ્ય ઍક્સેસથી લઈને રાષ્ટ્રીય સ્તર સુધી, ઓપનસેતુ સરકારોને સંપૂર્ણ-સ્ટેક ડિજિટલ સમાવેશ માટે એક સલામત, સજ્ઞા માર્ગ આપે છે.  
+ભારતને વૈશ્વિક ઇન્ટરનેટને પકડીને આગળ વધવાની જરૂર નથી. ઓપનસેતુ સાથે, અમે અમારી પોતાની ભાષામાં, અમારી શરતો પર આગળ વધીએ છીએ.</p>
         </div>
       </div>
     </div>
   </section>
+
 </body>
 </html>
